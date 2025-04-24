@@ -6,6 +6,9 @@ import "./globals.css";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { metadata } from "./metadata"; // Import metadata
 
+import { Authenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+
 Amplify.configure(outputs);
 
 const geistSans = Geist({
@@ -28,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Authenticator>{children}</Authenticator>
       </body>
     </html>
   );
