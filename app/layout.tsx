@@ -1,15 +1,12 @@
 "use client";
-import { Amplify } from "aws-amplify";
-import outputs from "@/amplify_outputs.json";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { metadata } from "./metadata"; // Import metadata
+import "./configureAmplify"; // Import Amplify configuration
 
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-
-Amplify.configure(outputs);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
